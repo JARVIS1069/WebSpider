@@ -40,7 +40,7 @@ The real page is never modified. All effects are drawn on a transparent overlay 
 Requires [Node.js](https://nodejs.org) 18 or newer.
 
 ```powershell
-git clone https://github.com/<your-username>/WebSpider.git
+git clone https://github.com/JARVIS1069/WebSpider.git
 cd WebSpider
 npm install
 npm start
@@ -107,4 +107,5 @@ Sound effects, spider skins, multi-page crawl, PDF export, screen-recording the 
 ## 📄 License
 
 MIT
+
 
