@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>The Quiet Architecture of Spider Silk</title>
+<meta name="description" content="A demo page for WebSpider: text, links, lists, tables and code to crawl.">
+<meta name="author" content="WebSpider Demo">
+<style>
+  body { margin: 0; background: #0d1117; color: #c9d1d9; font: 17px/1.65 Georgia, serif; }
+  nav { display: flex; gap: 22px; padding: 16px 8%; background: #161b22; font-family: sans-serif; }
+  nav a { color: #58a6ff; text-decoration: none; }
+  main { max-width: 820px; margin: 0 auto; padding: 30px 24px 120px; }
+  h1 { font-size: 40px; color: #fff; } h2 { color: #e6edf3; margin-top: 46px; border-bottom: 1px solid #30363d; padding-bottom: 6px; }
+  a { color: #f778ba; } table { border-collapse: collapse; width: 100%; } td, th { border: 1px solid #30363d; padding: 8px 12px; text-align: left; }
+  pre { background: #161b22; padding: 14px; border-radius: 6px; overflow: auto; color: #7ee787; }
+  img { max-width: 100%; border-radius: 8px; display: block; margin: 20px 0; }
+</style>
+</head>
+<body>
+<nav><a href="https://example.com/home">Home</a><a href="https://example.org/articles">Articles</a><a href="https://example.net/about">About</a><a href="#contact">Contact</a></nav>
+<main>
+  <h1>The Quiet Architecture of Spider Silk</h1>
+  <p>Spider silk is one of the most remarkable materials found in nature. Weight for weight, a strand of dragline silk is stronger than steel, yet it is also elastic enough to absorb the impact of a flying insect. Researchers have studied <a href="https://en.wikipedia.org/wiki/Spider_silk">spider silk</a> for decades, hoping to reproduce its properties in the laboratory.</p>
+  <p>An orb weaver can produce up to seven different kinds of silk, each with its own purpose. Some silk is sticky and used for catching prey, while other silk is dry and forms the structural frame of the web. The spider decides which gland to use depending on the job it is doing at that moment.</p>
+  <img alt="A diagram of an orb web with radial threads" src="data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='600' height='180'%3E%3Crect width='600' height='180' fill='%23161b22'/%3E%3Ccircle cx='300' cy='90' r='70' fill='none' stroke='%2358a6ff' stroke-width='2'/%3E%3Ccircle cx='300' cy='90' r='40' fill='none' stroke='%2358a6ff' stroke-width='2'/%3E%3C/svg%3E" width="600" height="180">
+  <h2 id="types">Kinds of silk</h2>
+  <ul>
+    <li>Dragline silk forms the frame and the safety line of the spider.</li>
+    <li>Capture silk is coated with glue droplets that trap insects.</li>
+    <li>Wrapping silk is used to swaddle prey for later consumption.</li>
+    <li>Egg sac silk protects the next generation of spiders from predators and weather.</li>
+  </ul>
+  <h2>Strength compared</h2>
+  <p>The numbers below are rough figures often quoted in materials science textbooks. Real values vary a great deal between species and even between individual threads of the same spider.</p>
+  <table>
+    <tr><th>Material</th><th>Tensile strength (GPa)</th><th>Toughness (MJ/m3)</th></tr>
+    <tr><td>Dragline silk</td><td>1.3</td><td>160</td></tr>
+    <tr><td>Kevlar</td><td>3.6</td><td>50</td></tr>
+    <tr><td>Steel</td><td>1.5</td><td>6</td></tr>
+  </table>
+  <h2>How a web is built</h2>
+  <p>The spider begins by releasing a thread into the wind. When the free end catches on a distant surface, the spider tightens the bridge line and walks across it, reinforcing the strand with a second thread. From this bridge it drops a Y-shaped frame, and the radial threads follow like the spokes of a wheel.</p>
+  <p>Finally the spider lays a sticky spiral from the outside inwards, using the radial threads as scaffolding. The whole process takes about an hour, and many spiders eat the old web each evening to recycle the proteins. Read more at <a href="https://www.nature.com/">Nature</a> or <a href="https://www.sciencedaily.com/">ScienceDaily</a>.</p>
+  <pre><code>function webStrength(diameter, species) {
+  const base = species === "orb" ? 1.3 : 0.9;
+  return base * Math.sqrt(diameter);
+}</code></pre>
+  <div id="lazy"></div>
+  <h2 id="contact">Contact</h2>
+  <p>Questions about this demonstration page can be sent to the imaginary maintainers at <a href="https://example.com/contact">example.com</a>. They will never answer, because they do not exist, but the spider will happily read this paragraph anyway.</p>
+</main>
+<script>
+  // Simulates lazy-loaded / SPA content that appears after load.
+  setTimeout(() => {
+    document.getElementById('lazy').innerHTML =
+      '<h2>Lazy loaded section</h2><p>This section was injected after the page finished loading, to prove that the scraper waits for the page to settle and scrolls to trigger late content. Silk is also used by some spiders to travel through the air in a behaviour known as ballooning, which lets young spiders cross oceans.</p>' +
+      '<p>Ballooning spiderlings climb to a high point, raise their abdomen, and release strands that catch the electric field and the wind. Some have been collected by ships hundreds of kilometres from land.</p>';
+  }, 700);
+</script>
+</body>
+</html>

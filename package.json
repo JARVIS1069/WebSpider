@@ -1,0 +1,16 @@
+{
+  "name": "webspider",
+  "version": "1.0.0",
+  "description": "A procedural IK spider that visibly crawls and scrapes web pages.",
+  "main": "main.js",
+  "scripts": {
+    "postinstall": "install-electron",
+    "start": "electron .",
+    "selftest": "set WEBSPIDER_AUTOTEST=1&& electron ."
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^44.5.1"
+  }
+}
+

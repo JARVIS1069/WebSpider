@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>WebSpider</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header id="bar">
+  <div class="brand"><span class="logo">&#10033;</span> WebSpider</div>
+  <input id="url" type="text" spellcheck="false" placeholder="https://example.com">
+  <button id="go" class="ghost">Go</button>
+  <button id="summon" class="primary">Summon Spider</button>
+  <label class="sl">Speed <input id="speed" type="range" min="0.5" max="3" step="0.1" value="1"><span id="speedv">1.0&times;</span></label>
+  <label class="sl" title="Little spiders hatched to help scrape">Brood <input id="brood" type="range" min="0" max="6" step="1" value="4"><span id="broodv">4</span></label>
+  <label class="chk"><input type="checkbox" id="robots" checked> robots.txt</label>
+  <label class="chk"><input type="checkbox" id="polite"> polite</label>
+  <button id="folder" class="ghost" title="Choose output folder">Output folder</button>
+  <span class="hint">Ctrl+Shift+S</span>
+</header>
+<main id="stage">
+  <canvas id="fx"></canvas>
+  <div id="hud" hidden>
+    <div><b id="h-el">0</b><small>elements</small></div>
+    <div><b id="h-w">0</b><small>words</small></div>
+    <div><b id="h-l">0</b><small>links</small></div>
+    <div><b id="h-p">0%</b><small>progress</small></div>
+    <div><b id="h-s">1</b><small>spiders</small><span id="h-legend"></span></div>
+  </div>
+  <div id="status"></div>
+  <div id="toast" hidden><span id="toast-msg"></span><button id="toast-open" class="primary" hidden>Open folder</button></div>
+</main>
+<script src="spider.js"></script>
+<script src="fx.js"></script>
+<script src="hole.js"></script>
+<script src="web.js"></script>
+<script src="renderer.js"></script>
+</body>
+</html>
