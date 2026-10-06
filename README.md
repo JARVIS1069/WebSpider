@@ -100,7 +100,7 @@ Copy `llm-hook.example.js` to `llm-hook.js`, implement it with your provider, an
 
 Only scrape sites you are allowed to scrape. Keep robots.txt enabled and polite mode on, and follow each site's terms of service.
 
-## 🗺️ Ideas
+## 🗺️ Future Ideas
 
 Sound effects, spider skins, multi-page crawl, PDF export, screen-recording the run, LLM summaries.
 
